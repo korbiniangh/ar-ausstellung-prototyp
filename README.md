@@ -27,3 +27,7 @@ Framework: [A-Frame](https://aframe.io/), [MindAR](https://github.com/hiukim/min
 3D-Wort: "Repair" - Tolga Ates
 
 3D-Schriftzug: "Was ist Zukunft?" - Korbinian Kindler
+
+### Quellen
+
+Icons - [flaticon](https://www.flaticon.com/) -  (CC Attribution Lizenz)
