@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>AR Kunstaustellung</title>
+
+    <link rel="stylesheet" href="exhibition.css" /> 
+    <link rel="stylesheet" href="style.css" />    
+  </head>
+  <body>
+    <form>
+     <input class="backbutton" type="button" value="<" onclick="history.back()">
+    </form>
+    <div class="wrapper">
+               <img
+          src="./assets/pin.svg"
+          alt="Home"
+          style="width: 60px; height: 60px"
+        />
+        <h1 class="title">AR vor Ort erleben</h1>
+        <div class="decider">
+          <a href="/gpstracking.html" class="panel">
+            <img
+              src="./assets/move.svg"
+              alt="Home"
+              style="width: 60px; height: 60px"
+            />
+            GPS-Suche
+            <div id="gpslocation"></div>
+          </a>
+
+          <a href="/imagetracking.html" class="panel">
+            <img
+              src="./assets/fullscreen.svg"
+              alt="Home"
+              style="width: 60px; height: 60px"
+            />
+            Bild-Scanner
+          </a>
+        </div>
+        <p class="description">
+          *Per GPS-Suche kann ein vorher definierter Ort aufgesucht werden, um das dort platzierte Objekt zu betrachten.
+           <br> <br>
+           *Der Scanner erkennt ein vorher definiertes Bild, um an dieser Stelle ein virtuelles Objekt anzuzeigen.
+        </p>
+      </div>
+  </body>
+</html>

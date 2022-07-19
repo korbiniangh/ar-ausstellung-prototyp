@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <!-- Marker wird abgerufen -->
+    <a-scene mindar-image="imageTargetSrc: ./assets/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <!-- 3D-Objekt wird abgerufen, dass angezeigt wird sobald der Marker erkannt wird -->
+        <a-asset-item id="objekt" src="./assets/3dobjekte/wasistzukunftblau.glb"></a-asset-item>
+      </a-assets>
+      <!-- Gerätekamera und Scan-Funktion zur Erfassung des Markers wird gestartet -->
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+        
+        <!-- Konfiguration wie das 3D-Objekt optisch dargestellt wird -->
+        <a-gltf-model rotation="0 0 0 " position="0 -1 0" scale="0.1 0.1 0.1" src="#objekt" animation="property: position; to: 0 0.1 0.1; dur: 6000; easing: easeInOutQuad; loop: true; dir: alternate">
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

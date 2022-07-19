@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>AR Kunstaustellung</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css" />
+
+  </head>
+  <body>
+    <form>
+      <input
+        class="backbutton"
+        type="button"
+        value="<"
+        onclick="history.back()"
+      />
+    </form>
+    <div class="wrapper">
+        <img
+          src="./assets/home.svg"
+          alt="Home"
+          style="width: 60px; height: 60px"
+        />
+        <h1 class="title">AR zu Hause erleben</h1>
+        <h2>3D Exponate</h2> 
+          <!-- Model Viewer Frame mit Schaltflächen zum Wechseln des angezeigten Objekts wird erzeugt.
+               Bodenplatzierung für virtuelle Objekte ist als Standard gesetzt
+          -->
+          <model-viewer
+            autoplay
+            src="./assets/3dobjekte/wasistzukunftblau.glb"
+            ios-src="./assets/3dobjekte/wasistzukunftblau.usdz"
+            shadow-intensity="1"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            ar-placement="floor"
+          >
+
+            <div class="slider">
+              <div class="slides">
+                <button
+                  class="slide selected"
+                  onclick="switchSrc(this, 'Objekt1')"
+                  style="
+                    background-image: url('./assets/poster-wasistzukunft.png');
+                  "
+                ></button
+                ><button
+                  class="slide"
+                  onclick="switchSrc(this, 'Objekt2')"
+                  style="
+                    background-image: url('./assets/poster-repair.png');
+                  "
+                ></button
+                ><button
+                  class="slide"
+                  onclick="switchSrc(this, 'Objekt3')"
+                  style="
+                    background-image: url('./assets/poster-dehumanization.png');
+                  "
+                ></button>
+                <button
+                  class="slide"
+                  onclick="switchSrc(this, 'Objekt4')"
+                  style="
+                    background-image: url('./assets/poster-fragment.png');
+                  "
+                ></button>
+              </div>
+            </div>
+          </model-viewer>
+              <p class="description">
+          *Durch das Ausrichten der Kamera zum Boden, kann das 3D-Objekt im Raum platziert werden.
+      </p>
+      
+          <!-- Der Dateipfad zum angezeigten 3D-Objekt wird entsprechend des ausgewählten Buttons ausgetauscht. -->
+          <script type="module">
+            const modelViewer = document.querySelector("model-viewer");
+            window.switchSrc = (element, name) => {
+              switch (name) {
+                case "Objekt1":
+                  modelViewer.src =
+                    "./assets/3dobjekte/wasistzukunftblau.glb";
+                  modelViewer.setAttribute(
+                    "ios-src",
+                    "./assets/3dobjekte/wasistzukunftblau.usdz"
+                  );
+                  break;
+                case "Objekt2":
+                  modelViewer.src =
+                    "./assets/3dobjekte/wort-repair.glb";
+                  modelViewer.setAttribute(
+                    "ios-src",
+                    "./assets/3dobjekte/wort-repair.usdz"
+                  );
+                  break;
+                case "Objekt3":
+                  modelViewer.src =
+                    "./assets/3dobjekte/wort-dehumanization.glb";
+                  modelViewer.setAttribute(
+                    "ios-src",
+                    "./assets/3dobjekte/wort-dehumanization.usdz"
+                  );
+                  break;
+                case "Objekt4":
+                  modelViewer.src =
+                    "./assets/3dobjekte/wort-fragment.glb";
+                  modelViewer.setAttribute(
+                    "ios-src",
+                    "./assets/3dobjekte/wort-fragment.usdz"
+                  );
+                  break;
+              }
+              const slides = document.querySelectorAll(".slide");
+              slides.forEach((element) => {
+                element.classList.remove("selected");
+              });
+              element.classList.add("selected");
+            };
+
+            document
+              .querySelector(".slider")
+              .addEventListener("beforexrselect", (ev) => {
+                ev.preventDefault();
+              });
+          </script>
+      
+        <h2 class="secondh2">2D Exponate</h2>
+        <!-- Model Viewer Frame für 2D-Exponate wird erzeugt.
+             Wandplatzierung für virtuelle Objekte wird eingestellt.
+        -->
+        <model-viewer
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          src="./assets/3dobjekte/artframe.glb"
+          ios-src="./assets/3dobjekte/artframe.usdz"
+          style="--poster-color: #eee"
+          ar-placement="wall"
+          enable-pan
+        >
+        </model-viewer> 
+        <p class="description">
+          *Durch das Ausrichten der Kamera zur Wand, kann das 2D-Objekt an einer Wand platziert werden.
+        </p>
+        </div>  
+  </body>
+
+</html>

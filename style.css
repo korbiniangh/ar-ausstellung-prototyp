@@ -1,0 +1,158 @@
+
+:root {
+  --color-bg: #eee;
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+}
+
+
+
+body {
+  font-family: Arial;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  padding:30px;
+}
+
+p {
+  text-align: justify;
+}
+
+.wrapper {
+  width:100%;
+  max-width:1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:auto;
+}
+
+.title {
+  color: black;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 105%;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom:20px!important;
+}
+
+h2 {
+  color: black;
+  margin-bottom:10px!important;
+}
+
+.backbutton {
+  text-decoration:none!important;
+  border:0px;
+  height:40px;
+  width:40px;
+  color: black!important;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow:  3px 3px 12px #a8a8a8,
+             -3px -3px 12px #ffffff;
+  
+}
+
+
+.decider {
+  width: 600px;
+  max-width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0);
+  width: 260px;
+  height: 260px;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0,0,0,0.8) !important;
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 40px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.modelgallery {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.panel:hover {
+  border-radius: 40px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.panel img {
+  margin-bottom: 10px;
+}
+
+.description {
+  text-align: justify!important;
+  margin-top:20px;
+}
+
+form.backbutton input {
+  font-size: 20px !important;
+}
+
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  
+  h1 {
+    font-size: 30px!important;
+}
+  
+  body {
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:20px;
+    padding-right:20px;
+}
+  
+  
+.decider {
+  width: 310px;
+  margin:auto;
+}
+  
+.decider p {
+  font-size:12px!important;
+  text-align: center;
+  margin-top: 5px!important;
+}
+  
+.panel {
+  width: 137px!important;
+  height: 137px!important;
+  font-size: 17px;
+  margin: 10px;
+  border-radius: 30px;
+    
+}
+  
+.panel img {
+  width:40px!important;
+  margin-bottom: -5px!important;
+}
+  
+}

@@ -1,0 +1,11 @@
+div#gpslocation {
+  font-size:12px!important;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+
+div#gpslocation {
+  font-size:10px!important;
+}
+}
