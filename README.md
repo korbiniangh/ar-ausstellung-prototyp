@@ -1,6 +1,7 @@
 ## Erstellung einer Mobile App mit Augmented Reality zur Realisierung einer virtuellen Kunstausstellung
 
 ---
+
 ### AR-Funktionen
 
 `Umgebungsbasierte AR`: home.html, home.css
@@ -16,7 +17,8 @@ Frameworks: [A-Frame](https://aframe.io/), [AR.js](https://github.com/AR-js-org)
 Framework: [A-Frame](https://aframe.io/), [MindAR](https://github.com/hiukim/mind-ar-js)
 
 ---
-### Verwendete 3D-Objekte
+
+### 3D-Objekte
 
 [Gemälde](https://sketchfab.com/3d-models/art-frame-25b86d7272e849f0967149243601bcbf#download) - Sketchfab (CC Attribution Lizenz)
 
@@ -30,4 +32,8 @@ Framework: [A-Frame](https://aframe.io/), [MindAR](https://github.com/hiukim/min
 
 ### Quellen
 
-Icons - [flaticon](https://www.flaticon.com/) -  (CC Attribution Lizenz)
+Icons - [flaticon](https://www.flaticon.com/) - (CC Attribution Lizenz)
+
+### Beispiel Bildmarker
+
+![Bildmarker](./assets/imagetrackingbild.jpeg)
