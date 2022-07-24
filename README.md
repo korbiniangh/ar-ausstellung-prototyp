@@ -1,7 +1,7 @@
 ## Erstellung einer Mobile App mit Augmented Reality zur Realisierung einer virtuellen Kunstausstellung
 
 ---
-![3D-Schriftzüge in AR](./assets/3dschriftzuege-in-ar.jpeg)
+![3D-Schriftzüge in AR](./assets/3dschriftzuege-in-ar.jpg)
 
 ### AR-Funktionen
 
