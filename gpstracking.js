@@ -11,10 +11,10 @@ window.onload = () => {
 function loadLocations() {
     return [
         {
-            name: 'Ort 1',
+            name: 'Luxemburger Str. 10, 13353 Berlin',
             location: {
-              lat: 52.583488,
-              lng: 13.285750,
+              lat: 52.544498,
+              lng: 13.353260,
             },
         },
     ];
